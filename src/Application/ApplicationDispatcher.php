@@ -30,8 +30,12 @@ class ApplicationDispatcher extends Dispatcher
             // Run grabber and get wanted data
             foreach ($this->codes as $code) {
                 try {
+                    $crawler = $this->getGrabber()->getSearchCrawler($code);
+
                     $this->data[$code] = [
-                        'price' => $this->getGrabber()->getPrice($code)
+                        'price' => $this->getGrabber()->getPrice($crawler),
+                        'name' => $this->getGrabber()->getName($crawler),
+                        'rating' => $this->getGrabber()->getRating($crawler),
                     ];
                 } catch (\Exception $exception) {
                     $this->data[$code] = null;

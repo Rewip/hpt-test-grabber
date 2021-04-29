@@ -1,16 +1,9 @@
-### ZADÁNÍ
+### README
 
-- Udělej fork tohoto repozitáře (https://github.com/hptroniccz/hpt-test-grabber).
-- Následující dva úkoly proveď postupně jako jednotlivé commity.
-- Použij kód kompatibilní s PHP 7.3.
+- Pro spusteni je potreba alespon PHP 7.3 a php-xml extension kvuli DOMElementu
 
-1. Naprogramuj aplikaci pro zjištění ceny produktu na CZC.cz. Vstup může být jeden nebo více kódů výrobce zboží. 
-    1. Vstupní bod aplikace je soubor [run.php](run.php) a spuštění metody run() instance třídy [Dispatcher](src/Dispatcher.php).
-    1. Vstupní data jsou v plaintext formě v souboru [vstup.txt](vstup.txt) (co řádek, to položka).
-    1. Výstup na stdout ve formátu JSON (viz [vzor.json](vzor.json)).
-   
-    ![zadání 1](img1.jpg)
+- Omlouvam se, ze kod neni otestovany, bohuzel trosku nestiham -> jinak bych doporucil Unit testy na implementace Grabberu a Outputu + E2E test na dispatcher, samozrejme by bylo potreba namockovat data
 
-1. Rozšiř aplikaci z bodu 1, aby získávala i název produktu a jeho procentuální hodnocení. Odpovídajícím způsobem rozšiř výstupní data.
+- Program lze po instalaci composeru `composer install` spustit prikazem `php run.php`
 
-    ![zadání 2](img2.jpg)
+- Je potreba mit na stejne urovni jako `run.php` i soubor `vstup.txt` bohuzel neni cas udelat std in vstup 
