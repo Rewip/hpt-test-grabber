@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace HPT;
+namespace App\HPT;
 
 interface Grabber
 {

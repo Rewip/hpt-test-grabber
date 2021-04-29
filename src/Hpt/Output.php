@@ -2,9 +2,11 @@
 
 declare(strict_types=1);
 
-namespace HPT;
+namespace App\HPT;
 
 interface Output
 {
     public function getJson(): string;
+
+    public function setOutputData(array $outputData): void;
 }

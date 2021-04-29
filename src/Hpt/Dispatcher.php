@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace HPT;
+namespace App\HPT;
 
 class Dispatcher
 {
@@ -26,5 +26,15 @@ class Dispatcher
         // code here
 
         return $this->output->getJson();
+    }
+
+    protected function getGrabber(): Grabber
+    {
+        return $this->grabber;
+    }
+
+    protected function getOutput(): Output
+    {
+        return $this->output;
     }
 }

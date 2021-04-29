@@ -1,0 +1,6 @@
+/vendor/
+/.idea/
+/phpdocker/
+/docker-compose.yml
+/output.json
+/temp

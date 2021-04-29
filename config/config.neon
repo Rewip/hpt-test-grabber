@@ -1,0 +1,5 @@
+services:
+    - App\Application\ApplicationDispatcher
+    - App\HPT\Dispatcher
+    - App\Item\ItemOutput
+    - App\Item\ItemGrabber
